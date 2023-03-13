@@ -2,22 +2,25 @@ class InterviewController < ApplicationController
   def index
     url = 'https://api.omens.com.br/single-item/open'
     response = Net::HTTP.get(URI(url))
+    programs = JSON.parse(response)
 
-    programs = JSON.parse(response).select { |program| program['type'] == params[:type] }
+    programs = programs.select { |program| program['type'] == program_type } if program_type.present?
 
     output = programs.map do |program|
       program.slice('name', 'price', 'variantId', 'type')
-    end.compact
+    end
 
     render json: output
   end
+
+  private
+
+  def program_type
+    params[:type]
+  end
 end
 
-# response = Net::HTTP.get(URI(url))
 
-As an AI language model, I cannot access external resources or systems. But I can explain what this code line does in general.
-
-This line of code makes a GET request to the specified URL using Net::HTTP library in Ruby. It gets the response from the server, which is then returned and stored in the variable named "response". The response could be in various formats such as HTML, JSON, XML, etc. It can be further processed or extracted to obtain the desired information.
 
 # iterate over an array of hashes
 # each hash has keys name, price, variantId, type. Some have presentation
