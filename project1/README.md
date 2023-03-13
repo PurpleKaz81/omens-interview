@@ -11,7 +11,7 @@
 
 ### Purpose
 
-This is a simple Rails app created for an interview process with Omens. The idea is to consume an API and display the results in JSON while filtering the array hash through one key-value only.
+This is a simple Rails app created for an interview process with Omens.
 
 ### Installation
 
@@ -24,7 +24,7 @@ I ran bundle install, used Net::HTTP to consume the api, used json to parse the 
 
 ### Usage
 
-The app is simple. It consumes the API and displays the results in JSON.
+The app is simple. It consumes an API and displays the results in JSON while filtering the array hash through four keys only. The page loads in localhost:3000 immediately filtering for type: "phyto", but can also be filtered for type: "course". If the query remains empty, the app will display all the results for the four keys.
 
 ### Contributing
 
