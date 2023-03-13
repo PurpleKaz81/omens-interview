@@ -7,7 +7,7 @@ class InterviewController < ApplicationController
 
     puts JSON.parse(response)
 
-    programs = JSON.parse(response).select { |program| program['type'] == 'phyto' }
+    programs = JSON.parse(response).select { |program| program['type'] == params[:type] }
 
     output = programs.map do |program|
       program.slice('name', 'price', 'variantId', 'type')
@@ -16,7 +16,6 @@ class InterviewController < ApplicationController
     render json: output
   end
 end
-
 
 # iterate over an array of hashes
 # each hash has keys name, price, variantId, type. Some have presentation
