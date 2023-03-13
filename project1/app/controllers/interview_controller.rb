@@ -3,13 +3,17 @@ require 'open-uri'
 class InterviewController < ApplicationController
   def index
     url = 'https://api.omens.com.br/single-item/open'
+    response = Net::HTTP.get(URI(url))
 
-    response = URI.open(url)
-    data = JSON.parse(response.read)
+    puts JSON.parse(response)
 
-    programs = data.select { |program| program['type'] == 'phyto' }
+    programs = JSON.parse(response).select { |program| program['type'] == 'phyto' }
 
-    render json: programs
+    output = programs.map do |program|
+      program.slice('name', 'price', 'variantId', 'type')
+    end
+
+    render json: output
   end
 end
 
