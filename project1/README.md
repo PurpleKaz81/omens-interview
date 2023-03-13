@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+- [Purpose](#purpose)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Further Technical Details](#further-technical-details)
 
-* Ruby version
+### Purpose
 
-* System dependencies
+This is a simple Rails app created for an interview process with Omens. The idea is to consume an API and display the results in JSON while filtering the array hash through one key-value only.
 
-* Configuration
+### Installation
 
-* Database creation
+I ran bundle install, used open-uri to consume the api, and used json to parse the data. I also used the rails server to run the app. If you don't have open-uri and json, install their gems with the following commands:
 
-* Database initialization
+  ```bash
+  gem install open-uri
+  gem install json
+  ```
 
-* How to run the test suite
+### Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+The app is simple. It consumes the API and displays the results in JSON.
 
-* Deployment instructions
+### Contributing
 
-* ...
+Since this is an interview process, I will not be accepting any contributions that don't come from the interviewers.
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+### Further Technical Details
+
+- Ruby version: 3.1.2p20
+- Rails version: 7.0.4.2
+- Database: SQLite3
+- Dependencies: open-uri, json
+- Deployment instructions: rails server
+[]: # Path: project1/app/controllers/api_controller.rb

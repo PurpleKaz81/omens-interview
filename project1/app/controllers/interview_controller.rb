@@ -5,16 +5,11 @@ class InterviewController < ApplicationController
     url = 'https://api.omens.com.br/single-item/open'
 
     response = URI.open(url)
-    json = JSON.parse(response.read)
+    data = JSON.parse(response.read)
 
-    # Do something with the JSON data
-
-    programs = json.map do |program|
-      program['type']
-    end
+    programs = data.select { |program| program['type'] == 'phyto' }
 
     render json: programs
-
   end
 end
 
