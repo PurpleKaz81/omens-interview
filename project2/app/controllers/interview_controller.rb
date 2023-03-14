@@ -1,3 +1,5 @@
+require 'net/http'
+
 class InterviewController < ApplicationController
   def index
     url = 'https://api.omens.com.br/single-item/open'
@@ -13,10 +15,24 @@ class InterviewController < ApplicationController
     render json: output
   end
 
+  def filter
+    url = 'https://api.omens.com.br/single-item/open'
+    response = Net::HTTP.get(URI(url))
+    programs = JSON.parse(response)
+
+    programs = programs.select { |program| program['type'] == program_type } if program_type.present?
+
+    render json: programs
+  end
+
   private
 
   def program_type
     params[:type]
+  end
+
+  def filter_type
+    params[:filter_type]
   end
 end
 
