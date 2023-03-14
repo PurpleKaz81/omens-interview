@@ -1,0 +1,6 @@
+<%= form_tag interview_index_path, method: :get do %>
+  <%= select_tag :type, options_for_select([['All', 'all'], ['Course', 'course'], ['Phyto', 'phyto'], ['Psycho', 'psycho']]) %>
+  <%= submit_tag 'Filter' %>
+<% end %>
+
+<%= javascript_include_tag 'filter' %>
