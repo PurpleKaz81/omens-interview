@@ -12,10 +12,12 @@ class InterviewController < ApplicationController
       program.slice('name', 'price', 'variantId', 'type')
     end
 
-    render json: output
+    render json: output, content_type: 'application/json'
   end
 
   def filter_view; end
+
+  def display_results; end
 
   private
 

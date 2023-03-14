@@ -5,11 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
     event.preventDefault()
     const filterValue = document.querySelector("#type").value
 
-    fetch(`http://localhost:3000/interview/index?type=${filterValue}`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data)
-    })
+    window.location.href = `http://localhost:3000/interview/display_results?type=${filterValue}`
   }
 
   form.addEventListener("submit", handleFormSubmit)
