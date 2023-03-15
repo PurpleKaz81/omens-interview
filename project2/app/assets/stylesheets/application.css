@@ -18,17 +18,12 @@
   min-height: 100vh;
 }
 
-#toggle-format {
-  width: 6.25rem;
-  text-align: center;
-}
-
 .filter-wrapper {
   display: flex;
   justify-content: space-between;
   max-width: 18.75rem;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .filter-wrapper select {
@@ -44,4 +39,84 @@
   max-width: 18.75rem;
   margin: 0 auto;
   margin-top: 1rem;
+}
+
+#toggle-format {
+  width: 6.25rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#json-results {
+  margin-top: 1rem;
+  white-space: pre-wrap; /* Enable wrapping of text */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-width: 100%; /* Limit the width to the parent container */
+  overflow-wrap: break-word; /* Break long unbreakable text (e.g., URLs) */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 500px; /* Set a maximum height to limit the content area */
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.custom-row {
+  min-height: 100vh;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 18.75rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.filter-wrapper select {
+  width: 100%;
+}
+
+.filter-wrapper input[type="submit"] {
+  margin: 0 auto;
+}
+
+.error-message {
+  display: none;
+  max-width: 18.75rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#toggle-format {
+  width: 6.25rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#json-results {
+  margin-top: 1rem;
+  white-space: pre-wrap; /* Enable wrapping of text */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-width: 100%; /* Limit the width to the parent container */
+  overflow-wrap: break-word; /* Break long unbreakable text (e.g., URLs) */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 500px; /* Set a maximum height to limit the content area */
+}
+
+#toggle-format:hover {
+  color: rgb(41, 41, 41);
+  background-color: rgb(218, 218, 218);
 }
