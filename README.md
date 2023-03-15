@@ -2,7 +2,7 @@
 
 ## Interview process for Omens
 
-Contained herein are two projects, one more straightfoward and the other slightly more sophisticated. 
+Contained herein are two projects, one more straightforward and the other slightly more sophisticated.
 
 ### Project 1
 
