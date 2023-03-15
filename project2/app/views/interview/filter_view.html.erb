@@ -1,6 +1,15 @@
-<%= form_tag interview_index_path, method: :get do %>
-  <%= select_tag :type, options_for_select([['All', 'all'], ['Course', 'course'], ['Phyto', 'phyto'], ['Psycho', 'psycho']]) %>
-  <%= submit_tag 'Filter' %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center align-items-center custom-row">
+    <div class="col-md-6 text-center">
+    <h1 id="main-header" class="mb-3">Filter Your Result By Type</h1>
+      <%= form_tag interview_index_path, method: :get do %>
+        <div class="filter-wrapper">
+          <%= select_tag :type, options_for_select([['All', 'all'], ['Course', 'course'], ['Phyto', 'phyto'], ['Psycho', 'psycho']]), prompt: "Filters", class: "form-select" %>
+        </div>
+        <%= submit_tag 'Filter', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <%= javascript_include_tag 'filter' %>

@@ -22,10 +22,12 @@ class InterviewController < ApplicationController
   private
 
   def program_type
+    return false if params[:type] == 'all'
+
     params[:type]
   end
 
-  def filter_type
-    params[:filter_type]
-  end
+  # def filter_type
+  #   params[:filter_type]
+  # end
 end

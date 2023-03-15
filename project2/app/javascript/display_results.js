@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       toggleButton.addEventListener("click", () => {
         formatted = !formatted
         displayData(data)
-        toggleButton.innerText = formatted ? "Raw" : "Formatted"
+        toggleButton.innerText = formatted ? "Formatted" : "Formatted"
       })
     })
 })

@@ -14,7 +14,34 @@
  *= require_self
  */
 
+.custom-row {
+  min-height: 100vh;
+}
+
 #toggle-format {
   width: 6.25rem;
   text-align: center;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 18.75rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.filter-wrapper select {
+  width: 100%;
+}
+
+.filter-wrapper input[type="submit"] {
+  margin: 0 auto;
+}
+
+.error-message {
+  display: none;
+  max-width: 18.75rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
