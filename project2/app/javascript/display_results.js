@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const type = new URLSearchParams(window.location.search).get("type")
   const toggleButton = document.querySelector("#toggle-format")
   let formatted = false
+  const backButton = document.querySelector("#back-to-filter")
 
   const displayData = (data) => {
     if (formatted) {
@@ -21,5 +22,12 @@ window.addEventListener("DOMContentLoaded", () => {
         displayData(data)
         toggleButton.innerText = formatted ? "Formatted" : "Raw"
       })
+  })
+
+  if (backButton) {
+    backButton.addEventListener("click", (e) => {
+      e.preventDefault()
+      window.location.href = "/"
     })
+  }
 })

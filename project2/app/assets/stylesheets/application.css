@@ -91,6 +91,7 @@
 
 .filter-wrapper input[type="submit"] {
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .error-message {
@@ -101,6 +102,11 @@
 }
 
 #toggle-format {
+  width: 6.25rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+#toggle-format-2 {
   width: 6.25rem;
   text-align: center;
   margin-top: 1rem;

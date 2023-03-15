@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <button id="toggle-format" type="button" class="btn btn-outline-secondary format-button">Format</button>
+    <div class="d-grid gap-2 d-md-block">
+      <button id="toggle-format" type="button" class="btn btn-outline-secondary">Format</button>
+      <%= link_to "Filter Again", '#', id: "back-to-filter", class: "btn btn-outline-secondary mt-3" %>
+    </div>
     <pre id="json-results"></pre>
   </div>
 </div>
