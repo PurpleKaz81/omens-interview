@@ -26,8 +26,4 @@ class InterviewController < ApplicationController
 
     params[:type]
   end
-
-  # def filter_type
-  #   params[:filter_type]
-  # end
 end
